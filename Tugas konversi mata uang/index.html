@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convert Money EUR, JPY, USD, and IDR</title>
+  </head>
+  <body>
+    <script>
+      // Fungsi untuk mengkonversi mata uang
+      function convertCurrency(amount, fromRate, toRate) {
+        return (amount / fromRate) * toRate;
+      }
+
+      // Kode mata uang dan nilai tukar (contoh)
+      const rates = {
+        USD: 1,
+        EUR: 0.93,
+        JPY: 148.85,
+        IDR: 15500, // Nilai tukar contoh IDR terhadap USD
+      };
+
+      let amount;
+      let fromCurrency;
+      let toCurrency;
+
+      // Mendapatkan input jumlah uang yang valid
+      while (true) {
+        const amountInput = prompt(
+          "Masukkan jumlah uang yang ingin dikonversi:"
+        );
+        amount = parseFloat(amountInput);
+
+        if (isNaN(amount) || amount <= 0) {
+          alert(
+            "Jumlah uang yang dimasukkan tidak valid. Harap masukkan angka yang valid dan lebih besar dari nol."
+          );
+        } else {
+          break;
+        }
+      }
+
+      // Mendapatkan input mata uang asal dan tujuan yang valid
+      while (true) {
+        fromCurrency = prompt(
+          "Masukkan kode mata uang asal (misalnya USD, EUR, JPY, IDR):"
+        ).toUpperCase();
+        toCurrency = prompt(
+          "Masukkan kode mata uang tujuan (misalnya USD, EUR, JPY, IDR):"
+        ).toUpperCase();
+
+        if (!rates[fromCurrency] || !rates[toCurrency]) {
+          alert(
+            "Mata uang tidak valid. Harap masukkan kode mata uang yang valid."
+          );
+        } else {
+          break;
+        }
+      }
+
+      // Menghitung konversi
+      const convertedAmount = convertCurrency(
+        amount,
+        rates[fromCurrency],
+        rates[toCurrency]
+      );
+      console.log(
+        `Jumlah ${amount} ${fromCurrency} dikonversi menjadi ${convertedAmount.toFixed(
+          2
+        )} ${toCurrency}.`
+      );
+    </script>
+  </body>
+</html>

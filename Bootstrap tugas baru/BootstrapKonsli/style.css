@@ -1,0 +1,7 @@
+.morza {
+  height: 350px;
+  padding: 12px 12px 12px 12px;
+  border: 0px solid transparent;
+  border-radius: 15%;
+  background: linear-gradient(#0ca748, #bb260b, #404040);
+}

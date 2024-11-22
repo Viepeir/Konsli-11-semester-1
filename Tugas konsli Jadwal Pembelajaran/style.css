@@ -1,0 +1,51 @@
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+.sejarah {
+    background-color: red;
+}
+
+.Mat{
+    background-color: brown;
+}
+
+.PP{
+    background-color: blueviolet;
+}
+
+.PAI {
+    background-color: chartreuse;
+}
+
+.Bing{
+    background-color: aquamarine;
+}
+
+.PKK {
+    background-color: blue;
+}
+
+.Mapil {
+    background-color: darkblue;
+}
+
+.Pjoks{
+    background-color: crimson;
+}
+.bindo{
+    background-color: aqua;
+}
+.Konsli{
+    background-color: darkorange;
+}
+.Jawa{
+    background-color: darkseagreen;
+}
+.BK{
+    background-color: deepskyblue;
+}
